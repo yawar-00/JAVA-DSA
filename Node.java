@@ -25,6 +25,21 @@ class Node{
 		head=newNode;
 		return head;
 	}
+	public Node addAtEnd(Node head,int d){
+		Node newNode = new Node(d);
+		if(head==null){
+			head=newNode;
+			return head;
+		}
+		else{
+			Node temp=head;
+			while(temp.next!=null){
+				temp=temp.next;
+			}
+			temp.next=newNode;
+		}
+		return head;
+	}
 	public static void main(String []args){
 		Node first =new Node(10);
 		Node second =new Node(20);	
@@ -36,6 +51,9 @@ class Node{
 		head.next.next.next=four;
 		head.printData(head);
 		head=head.addAtStart(head,5);
+		System.out.println("\nAfter adding new node :-");
+		head.printData(head);
+		head=head.addAtEnd(head,50);
 		System.out.println("\nAfter adding new node :-");
 		head.printData(head);
 	}
