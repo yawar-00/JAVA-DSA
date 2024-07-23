@@ -1,3 +1,5 @@
+//This is for Singly LinkList
+
 class Node{
 	int data;
 	Node next;
